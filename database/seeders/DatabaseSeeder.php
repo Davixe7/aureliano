@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             BoxTypeSeeder::class,
             CardboardTypeSeeder::class,
             LidTypeSeeder::class,
+            AddressSeeder::class,
         ]);
     }
 }
