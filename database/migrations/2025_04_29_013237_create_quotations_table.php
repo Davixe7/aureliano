@@ -21,6 +21,14 @@ return new class extends Migration
             $table->foreignId('lid_type_id')->constrained()->cascadeOnDelete();
             $table->foreignId('company_id')->constrained()->cascadeOnDelete();
             $table->foreignId('address_id')->constrained()->cascadeOnDelete();
+            $table->string('status')->default('pending');
+            $table->integer('quantity')->default(1);
+            $table->string('product_name');
+            $table->string('product_color');
+            $table->integer('product_width_mm');
+            $table->integer('product_length_mm');
+            $table->integer('product_height_mm');
+            $table->integer('product_color_qty');
             $table->timestamps();
         });
     }

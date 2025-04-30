@@ -6,6 +6,10 @@ use App\Http\Controllers\CardboardTypeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LidTypeController;
+use App\Http\Controllers\AdminAuthController;
+
+Route::post('/admin/login', [AdminAuthController::class, 'login']);
+Route::post('/admin/logout', [AdminAuthController::class, 'logout'])->middleware('auth:admin');
 
 Route::apiResources([
     'categories' => CategoryController::class,
@@ -22,3 +26,9 @@ Route::get('users/{user}/addresses', function (\App\Models\User $user) {
 Route::get('users/{user}/company', function (\App\Models\User $user) {
     return new \App\Http\Resources\CompanyResource($user->company);
 });
+
+Route::post('/admin/notifications/{id}/read', function ($id) {
+    //auth()->user()->notifications()->where('id', $id)->first()->markAsRead();
+    //return response()->json(['message' => 'Notificación marcada como leída']);
+});
+
