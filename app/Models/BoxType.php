@@ -12,8 +12,4 @@ class BoxType extends Model implements HasMedia
 
     protected $guarded = [];
 
-    public function registerMediaCollections(): void
-    {
-        $this->addMediaCollection('media')->singleFile();
-    }
 }

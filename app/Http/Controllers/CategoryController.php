@@ -13,9 +13,11 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return CategoryResource::collection(Category::all());
+        $categories = Category::whereParentId($request->category_id)->get();
+
+        return CategoryResource::collection($categories);
     }
 
     public function store(StoreCategoryRequest $request)

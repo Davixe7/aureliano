@@ -25,9 +25,9 @@ return new class extends Migration
             $table->integer('quantity')->default(1);
             $table->string('product_name');
             $table->string('product_color');
-            $table->integer('product_width_mm');
-            $table->integer('product_length_mm');
-            $table->integer('product_height_mm');
+            $table->integer('box_width_mm');
+            $table->integer('box_length_mm');
+            $table->integer('box_height_mm');
             $table->integer('product_color_qty');
             $table->timestamps();
         });
