@@ -15,6 +15,12 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         Category::create([
+            'name' => 'Ejemplo de Sub Categoría',
+            'slug' => Str::slug('Ejemplo de SubCategoría'),
+            'enabled' => true
+        ]);
+
+        Category::create([
             'name' => 'Ejemplo de Categoría',
             'slug' => Str::slug('Ejemplo de Categoría'),
             'enabled' => true

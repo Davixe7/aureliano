@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string('rfc')->unique();
             $table->string('economic_activity');
             $table->string('invoice_email'); // Email para recepción de facturas
-            $table->string('address'); // Dirección con asentamiento
-            $table->string('state');
-            $table->string('city');
-            $table->string('zip_code');
+            $table->string('address')->nullable(); // Dirección con asentamiento
+            $table->string('state')->nullable();;
+            $table->string('city')->nullable();;
+            $table->string('zip_code')->nullable();;
             $table->string('referral_code')->nullable();
             $table->timestamps();
         });
