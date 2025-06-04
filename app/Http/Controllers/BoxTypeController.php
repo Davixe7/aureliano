@@ -15,7 +15,7 @@ class BoxTypeController extends Controller
      */
     public function index()
     {
-        return BoxTypeResource::collection(BoxType::all());
+        return BoxTypeResource::collection(BoxType::with('lines')->get());
     }
 
     public function store(StoreBoxTypeRequest $request)

@@ -12,4 +12,8 @@ class BoxType extends Model implements HasMedia
 
     protected $guarded = [];
 
+    public function lines(){
+        return $this->hasMany(BoxTypeLine::class);
+    }
+
 }

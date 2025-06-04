@@ -15,9 +15,9 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $parentCategories = [
-            ['name' => 'Industria, Comercio y Delivery', 'description' => 'Alimentos preparados, delivery, aseo y limpieza, vinos, lácteos y otros'],
-            ['name' => 'Agrícola', 'description' => 'Frutas y verduras frescas, congeladas y deshidratadas'],
-            ['name' => 'Proteínas', 'description' => 'Carnes, pollos, pescados, mariscos, huevos y derivados'],
+            ['img' => 'https://cdn-boxia-web.cmpc-innovation.com/assests/segments/industrial-box.svg', 'name' => 'Industria, Comercio y Delivery', 'description' => 'Alimentos preparados, delivery, aseo y limpieza, vinos, lácteos y otros'],
+            ['img' => 'https://cdn-boxia-web.cmpc-innovation.com/assests/segments/farming-box.svg', 'name' => 'Agrícola', 'description' => 'Frutas y verduras frescas, congeladas y deshidratadas'],
+            ['img' => 'https://cdn-boxia-web.cmpc-innovation.com/assests/segments/proteins-box.svg', 'name' => 'Proteínas', 'description' => 'Carnes, pollos, pescados, mariscos, huevos y derivados'],
         ];
 
         foreach($parentCategories as $category){
